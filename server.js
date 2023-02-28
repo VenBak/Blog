@@ -26,11 +26,13 @@ const sess = {
 // Invoke the session
 app.use(session(sess));
 
+const hbs = exphbs.create({});
+
 
 // Set handlebars as the engine for the view
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
-const hbs = exphbs.create({});
+
 
 
 // Invoke express
